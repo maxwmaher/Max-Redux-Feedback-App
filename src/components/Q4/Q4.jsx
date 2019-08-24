@@ -23,8 +23,10 @@ class Q4 extends Component {
     }
 
     commentValidator = () => {
-        if (this.state.comment.length > 300) {
-            return <span className="span-red">{300 - this.state.comment.length} characters remaining.</span>;
+        if (this.state.comment.length === 301) {
+            return <span className="span-red">You have entered {-(300 - this.state.comment.length)} character beyond the maximum allowed. <br/> Please shorten this comment.</span>;
+        } else if (this.state.comment.length > 300) {
+            return <span className="span-red">You have entered {-(300 - this.state.comment.length)} characters beyond the maximum allowed. <br/> Please shorten this comment.</span>;
         } else if (this.state.comment.length === 299) {
             return <span>{300 - this.state.comment.length} character remaining.</span>;
         } else {
@@ -33,7 +35,6 @@ class Q4 extends Component {
     }
 
     render() {
-        console.log(this.state.comment);
 
         return (
             <div className="div-Q4main">
