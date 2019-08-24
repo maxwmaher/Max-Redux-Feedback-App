@@ -34,6 +34,10 @@
   padding-left: 40px;
 }
 
+.tr-fixed {
+  height: 50px;
+}
+
 .input-radio {
   margin-bottom: 10px;
 }
@@ -60,4 +64,8 @@
 
 .span-toggle {
   font-size: 24px;
+}
+
+.span-selectedValueDescription {
+  font-size: 18px;
 }
