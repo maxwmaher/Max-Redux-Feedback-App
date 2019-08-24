@@ -14,9 +14,25 @@ const Q1 = (state = '', action) => {
     return state;
 }
 
+const Q2 = (state = '', action) => {
+    if (action.type === 'Q2') {
+        return action.payload
+    }
+    return state;
+}
+
+const Q3 = (state = '', action) => {
+    if (action.type === 'Q3') {
+        return action.payload
+    }
+    return state;
+}
+
 const reduxStore = createStore(
     combineReducers({
-    Q1
+    Q1,
+    Q2,
+    Q3
     }),
     applyMiddleware(logger)
 )

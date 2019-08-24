@@ -42,30 +42,38 @@
   margin-bottom: 10px;
 }
 
-#span-worst {
+.span-worst {
   color: red;
 }
 
-#span-worse {
+.span-worse {
   color: orange;
 }
 
-#span-neutral {
+.span-neutral {
   color: black;
 }
 
-#span-better {
+.span-better {
   color: blue
 }
 
-#span-best {
+.span-best {
   color: green
 }
 
 .span-toggle {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .span-selectedValueDescription {
   font-size: 18px;
+}
+
+.td-charactersRemaining {
+  font-size: 12px;
+}
+
+.span-red {
+  color: red;
 }

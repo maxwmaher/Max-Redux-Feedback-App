@@ -103,11 +103,11 @@ class Q1 extends Component {
                             <tr className="tr-fixed">
                                 <td colSpan="5">
                                     <br />
-                                    {this.state.showWorst && <span className="span-toggle" id="span-worst">terrible</span>}
-                                    {this.state.showWorse && <span className="span-toggle" id="span-worse">bad</span>}
-                                    {this.state.showNeutral && <span className="span-toggle" id="span-neutral">okay</span>}
-                                    {this.state.showBetter && <span className="span-toggle" id="span-better">good</span>}
-                                    {this.state.showBest && <span className="span-toggle" id="span-best">great</span>}
+                                    {this.state.showWorst && <span className="span-toggle span-worst">terrible</span>}
+                                    {this.state.showWorse && <span className="span-toggle span-worse">bad</span>}
+                                    {this.state.showNeutral && <span className="span-toggle span-neutral">okay</span>}
+                                    {this.state.showBetter && <span className="span-toggle span-better">good</span>}
+                                    {this.state.showBest && <span className="span-toggle span-best">great</span>}
                                 </td>
                             </tr>
                         </tbody>
