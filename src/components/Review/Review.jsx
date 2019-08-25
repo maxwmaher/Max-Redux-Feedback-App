@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import axios from 'axios';
 
 class Review extends Component {
 
     handleSubmit = () => {
-        this.props.history.push('/ThankYou')
-    }
-
+        axios.post('feedback', this.props.reduxStore)
+            .then(response => {
+                this.props.history.push('/ThankYou');
+                console.log(response.data);
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    };
+    
     render() {
 
         return (
@@ -38,7 +46,7 @@ class Review extends Component {
                                     {this.props.reduxStore.Q1.selectedValueScore}
                                 </td>
                                 <td>
-                                    {this.props.reduxStore.Q1.selectedValueDescription}
+                                    <i>{this.props.reduxStore.Q1.selectedValueDescription}</i>
                                 </td>
                             </tr>
                             <tr>
@@ -49,7 +57,7 @@ class Review extends Component {
                                     {this.props.reduxStore.Q2.selectedValueScore}
                                 </td>
                                 <td>
-                                    {this.props.reduxStore.Q2.selectedValueDescription}
+                                    <i>{this.props.reduxStore.Q2.selectedValueDescription}</i>
                                 </td>
                             </tr>
                             <tr>
@@ -60,7 +68,7 @@ class Review extends Component {
                                     {this.props.reduxStore.Q3.selectedValueScore}
                                 </td>
                                 <td>
-                                    {this.props.reduxStore.Q3.selectedValueDescription}
+                                <i>{this.props.reduxStore.Q3.selectedValueDescription}</i>
                                 </td>
                             </tr>
                             <tr>
@@ -68,7 +76,7 @@ class Review extends Component {
                                     Comments
                                 </td>
                                 <td colSpan="2">
-                                    {this.props.reduxStore.Q4}
+                                    <i>{this.props.reduxStore.Q4}</i>
                                 </td>
                             </tr>
                         </tbody>

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
-import axios from 'axios';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import Q1 from '../Q1/Q1';
 import Q2 from '../Q2/Q2';
