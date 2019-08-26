@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Button } from '@material-ui/core';
+import { NavigateNext } from '@material-ui/icons';
 
 class Q4 extends Component {
 
@@ -40,7 +41,7 @@ class Q4 extends Component {
         return (
             <div className="div-Q4main">
                 <div className="div-question">
-                    <h3><b>Please feel free to leave any comments.</b></h3>
+                    <h5><b>Please feel free to leave any comments.</b></h5>
                 </div>
                 <div className="div-inputs">
                     <table>
@@ -62,7 +63,7 @@ class Q4 extends Component {
                 <br />
                 <p><span>
                     <Button onClick={this.handleNextClick} variant="outlined" color="primary" type="submit">
-                        Next
+                        Next <NavigateNext />
                 </Button>
                     </span></p>
             </div>

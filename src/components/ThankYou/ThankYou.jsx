@@ -14,8 +14,10 @@ class ThankYou extends Component {
     render() {
         return (
             <div>
-                <h2>Thank you for your feedback!</h2>
-                <img src="https://miro.medium.com/max/612/1*sz3x5iKbBV_iJ2-47CmfIA.jpeg" alt="gold star"/>
+                <h3>Thank you for your feedback!</h3>
+                <br/>
+                <p>We appreciate hearing from you.</p>
+                <br/>
                 <p>
                     <Button onClick={this.handleClick} variant="contained" color="primary" type="submit">
                         Leave New Feedback

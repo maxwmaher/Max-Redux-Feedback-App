@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import { HashRouter as Router, Route } from 'react-router-dom';
+import './bootstrap.css';
 import './App.css';
 import Q1 from '../Q1/Q1';
 import Q2 from '../Q2/Q2';

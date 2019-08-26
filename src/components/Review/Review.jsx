@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import { Button } from '@material-ui/core';
+import { NavigateNext } from '@material-ui/icons';
 
 class Review extends Component {
 
@@ -21,19 +22,19 @@ class Review extends Component {
         return (
             <div className="div-review">
                 <div className="div-question">
-                    <h3><b>Please review your feedback.</b></h3>
+                    <h5><b>Please review your feedback.</b></h5>
                 </div>
                 <div className="div-inputs">
-                    <table className="table-review">
-                            <thead>
+                    <table className="table-review table-hover">
+                        <thead className="thead-dark">
                                 <tr>
-                                    <th className="thead-1" width="15%">
+                                    <th className="thead-1" width="25%">
                                         Area
                                     </th>
-                                    <th className="thead-2" width="10%">
+                                    <th className="thead-2" width="15%">
                                         Score
                                     </th>
-                                    <th className="thead-3" width="75%">
+                                    <th className="thead-3" width="60%">
                                         Description
                                     </th>
                                 </tr>
@@ -72,22 +73,15 @@ class Review extends Component {
                                 <i>{this.props.reduxStore.Q3.selectedValueDescription}</i>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>
-                                    Comments
-                                </td>
-                                <td colSpan="2">
-                                    <i>{this.props.reduxStore.Q4}</i>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
-                    <br />
                 </div>
-                <br />
+                <br/>
+                <h6>Comments:</h6> <i>{this.props.reduxStore.Q4}</i>
+                <br /><br/>
                 <p><span>
                     <Button onClick={this.handleSubmit} variant="outlined" color="primary" type="submit">
-                        Next
+                        Next <NavigateNext />
                 </Button>
                     </span></p>
             </div>
