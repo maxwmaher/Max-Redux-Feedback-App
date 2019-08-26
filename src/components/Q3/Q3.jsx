@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Button } from '@material-ui/core';
 
 class Q3 extends Component {
 
@@ -115,7 +116,11 @@ class Q3 extends Component {
                 </div>
                 <br />
                 <span className="span-selectedValueDescription">{this.state.selection.selectedValueDescription}</span>
-                {this.state.selection.selectedValueDescription && <p><span><button onClick={this.handleNextClick}>Next</button></span></p>}
+                {this.state.selection.selectedValueDescription && <p><span>
+                    <Button onClick={this.handleNextClick} variant="outlined" color="primary" type="submit">
+                        Next
+                </Button>
+                    </span></p>}
             </div>
         )
     }

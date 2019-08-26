@@ -1,12 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  src: url('https://fonts.googleapis.com/css?family=Roboto');
+}
+
 .App {
   text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 .App-header {
-  background-color: #033076;
+  background-color: #222324;
   min-height: 70px;
   padding: 20px;
   color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
 .App-title {
@@ -42,7 +51,7 @@
   margin-bottom: 10px;
 }
 
-.span-worst {
+/* .span-worst {
   color: red;
 }
 
@@ -60,10 +69,11 @@
 
 .span-best {
   color: green
-}
+} */
 
 .span-toggle {
   font-size: 20px;
+  color: rgb(129, 160, 209);
 }
 
 .span-selectedValueDescription {
@@ -79,6 +89,7 @@
 }
 
 .table-review {
+  background-color: white;
   border-collapse: collapse;
   width: 80%;
 }
@@ -87,3 +98,8 @@
   border: 1px solid #ddd;
   padding: 8px;
 }
+
+body {
+  background-color: rgb(233, 233, 230);
+}
+

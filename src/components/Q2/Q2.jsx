@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Button } from '@material-ui/core';
 
 class Q2 extends Component {
 
@@ -83,19 +84,19 @@ class Q2 extends Component {
                                 </td>
                                 <td onMouseEnter={this.toggleNeutral} onMouseLeave={this.toggleNeutral}>
                                     <input className="input-radio" type="radio" id="3" name="Q1" value="3"
-                                        onClick={() => this.handleInputClick(3, `I understand some of it.`)} />
+                                        onClick={() => this.handleInputClick(3, `I understand some of this.`)} />
                                     <br />
                                     <label htmlFor="3">3</label>
                                 </td>
                                 <td className="td-last" onMouseEnter={this.toggleBetter} onMouseLeave={this.toggleBetter}>
                                     <input className="input-radio" type="radio" id="4" name="Q1" value="4"
-                                        onClick={() => this.handleInputClick(4, `I understand most of it.`)} />
+                                        onClick={() => this.handleInputClick(4, `I understand most of this.`)} />
                                     <br />
                                     <label htmlFor="4">4</label>
                                 </td>
                                 <td className="td-last" onMouseEnter={this.toggleBest} onMouseLeave={this.toggleBest}>
                                     <input className="input-radio" type="radio" id="5" name="Q1" value="5"
-                                        onClick={() => this.handleInputClick(5, `I understand all of it!`)} />
+                                        onClick={() => this.handleInputClick(5, `I understand all of this!`)} />
                                     <br />
                                     <label htmlFor="5">5</label>
                                 </td>
@@ -115,7 +116,11 @@ class Q2 extends Component {
                 </div>
                 <br />
                 <span className="span-selectedValueDescription">{this.state.selection.selectedValueDescription}</span>
-                {this.state.selection.selectedValueDescription && <p><span><button onClick={this.handleNextClick}>Next</button></span></p>}
+                {this.state.selection.selectedValueDescription && <p><span>
+                    <Button onClick={this.handleNextClick} variant="outlined" color="primary" type="submit">
+                        Next
+                </Button>
+                </span></p>}
             </div>
         )
     }

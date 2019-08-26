@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import { Button } from '@material-ui/core';
 
 class Review extends Component {
 
@@ -84,7 +85,11 @@ class Review extends Component {
                     <br />
                 </div>
                 <br />
-                <p><span><button onClick={this.handleSubmit}>Submit</button></span></p>
+                <p><span>
+                    <Button onClick={this.handleSubmit} variant="outlined" color="primary" type="submit">
+                        Next
+                </Button>
+                    </span></p>
             </div>
         )
     }

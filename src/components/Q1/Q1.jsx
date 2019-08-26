@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Button } from '@material-ui/core';
 
 class Q1 extends Component {
 
@@ -55,7 +56,7 @@ class Q1 extends Component {
     }
 
     handleNextClick = () => {
-        this.props.dispatch({type: 'Q1', payload: this.state.selection})
+        this.props.dispatch({ type: 'Q1', payload: this.state.selection })
         this.props.history.push('/Q2')
     }
 
@@ -71,7 +72,7 @@ class Q1 extends Component {
                             <tr>
                                 <td className="td-first" onMouseEnter={this.toggleWorst} onMouseLeave={this.toggleWorst}>
                                     <input className="input-radio" type="radio" id="1" name="Q1" value="1"
-                                        onClick={() => this.handleInputClick(1, `I'm feeling terrible.`)} />
+                                        onClick={() => this.handleInputClick(1, `I'm feeling CRUDdy.`)} />
                                     <br />
                                     <label htmlFor="1">1</label>
                                 </td>
@@ -103,7 +104,7 @@ class Q1 extends Component {
                             <tr className="tr-fixed">
                                 <td colSpan="5">
                                     <br />
-                                    {this.state.showWorst && <span className="span-toggle span-worst">terrible</span>}
+                                    {this.state.showWorst && <span className="span-toggle span-worst">CRUDdy</span>}
                                     {this.state.showWorse && <span className="span-toggle span-worse">bad</span>}
                                     {this.state.showNeutral && <span className="span-toggle span-neutral">okay</span>}
                                     {this.state.showBetter && <span className="span-toggle span-better">good</span>}
@@ -115,7 +116,12 @@ class Q1 extends Component {
                 </div>
                 <br />
                 <span className="span-selectedValueDescription">{this.state.selection.selectedValueDescription}</span>
-                {this.state.selection.selectedValueDescription && <p><span><button onClick={this.handleNextClick}>Next</button></span></p>}
+
+                {this.state.selection.selectedValueDescription && <p><span>
+                    <Button onClick={this.handleNextClick} variant="outlined" color="primary" type="submit">
+                        Next
+                </Button>
+                </span></p>}
             </div>
         )
     }

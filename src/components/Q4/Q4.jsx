@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Button } from '@material-ui/core';
 
 class Q4 extends Component {
 
@@ -28,9 +29,9 @@ class Q4 extends Component {
         } else if (this.state.comment.length > 300) {
             return <span className="span-red">You have entered {-(300 - this.state.comment.length)} characters beyond the maximum allowed. <br/> Please shorten this comment.</span>;
         } else if (this.state.comment.length === 299) {
-            return <span>{300 - this.state.comment.length} character remaining.</span>;
+            return <span>{300 - this.state.comment.length} character remaining</span>;
         } else {
-            return <span>{300 - this.state.comment.length} characters remaining.</span>;
+            return <span>{300 - this.state.comment.length} characters remaining</span>;
         }
     }
 
@@ -59,7 +60,11 @@ class Q4 extends Component {
                     <br />
                 </div>
                 <br />
-                <p><span><button onClick={this.handleNextClick}>Next</button></span></p>
+                <p><span>
+                    <Button onClick={this.handleNextClick} variant="outlined" color="primary" type="submit">
+                        Next
+                </Button>
+                    </span></p>
             </div>
         )
     }
