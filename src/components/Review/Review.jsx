@@ -22,6 +22,7 @@ class Review extends Component {
         return (
             <div className="div-review">
                 <div className="div-question">
+                    <h6>Step <b>5</b> of <b>5</b></h6>
                     <h5><b>Please review your feedback.</b></h5>
                 </div>
                 <br/>

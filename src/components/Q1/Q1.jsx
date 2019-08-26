@@ -68,6 +68,7 @@ class Q1 extends Component {
         return (
             <div className="div-Q1main">
                 <div className="div-question">
+                    <h6>Step <b>1</b> of <b>5</b></h6>
                     <h5><b>How are you feeling today?</b></h5>
                 </div>
                 <div className="div-inputs">
