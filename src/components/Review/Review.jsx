@@ -24,6 +24,7 @@ class Review extends Component {
                 <div className="div-question">
                     <h5><b>Please review your feedback.</b></h5>
                 </div>
+                <br/>
                 <div className="div-inputs">
                     <table className="table-review table-hover">
                         <thead className="thead-dark">
