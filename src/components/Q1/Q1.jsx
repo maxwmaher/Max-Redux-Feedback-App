@@ -5,8 +5,8 @@ import { NavigateNext } from '@material-ui/icons';
 
 class Q1 extends Component {
 
-//With more time, I'd look into moving the 45 below lines into App or Redux to keep the code dry on each Question Page.
-//Comments for Q1 should are applicable for Q2/Q3.
+//With more time, I'd look into moving the 45 below lines into App and passing as props to keep the code dry on each Question Page.
+//Comments for Q1 are applicable for Q2/Q3.
 
     state = {
         showWorst: false,
