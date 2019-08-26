@@ -9,7 +9,7 @@ class ThankYou extends Component {
             type: 'CLEAR'
         });
         this.props.history.push('/')
-    }
+    } //Clears the user's selected answers from Redux and goes back to the beginning.
 
     render() {
         return (

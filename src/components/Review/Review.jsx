@@ -15,7 +15,7 @@ class Review extends Component {
             .catch(err => {
                 console.log(err);
             });
-    };
+    }; //Submits all the information from Redux into the SQL server.
     
     render() {
 
@@ -50,7 +50,7 @@ class Review extends Component {
                                 <td>
                                     <i>{this.props.reduxStore.Q1.selectedValueDescription}</i>
                                 </td>
-                            </tr>
+                            </tr> {/* Displays the Q1 (Support) answers. */}
                             <tr>
                                 <td>
                                     Understanding
@@ -61,7 +61,7 @@ class Review extends Component {
                                 <td>
                                     <i>{this.props.reduxStore.Q2.selectedValueDescription}</i>
                                 </td>
-                            </tr>
+                            </tr> {/* Displays the Q2 (Understanding) answers. */}
                             <tr>
                                 <td>
                                     Support
@@ -72,12 +72,12 @@ class Review extends Component {
                                 <td>
                                 <i>{this.props.reduxStore.Q3.selectedValueDescription}</i>
                                 </td>
-                            </tr>
+                            </tr> {/* Displays the Q3 (Support) answers. */}
                         </tbody>
                     </table>
                 </div>
                 <br/>
-                <h6>Comments:</h6> <i>{this.props.reduxStore.Q4}</i>
+                <h6>Comments:</h6> <i>{this.props.reduxStore.Q4}</i> {/* Displays the Comment. */}
                 <br /><br/>
                 <p><span>
                     <Button onClick={this.handleSubmit} variant="outlined" color="primary" type="submit">
@@ -92,5 +92,6 @@ class Review extends Component {
 const mapStateToProps = (reduxStore) => ({
     reduxStore
 })
+// Need to define this as we are now displaying information from Redux to the DOM.
 
 export default connect(mapStateToProps)(Review);

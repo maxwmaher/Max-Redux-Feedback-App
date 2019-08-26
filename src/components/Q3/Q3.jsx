@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { Button } from '@material-ui/core';
 import { NavigateNext } from '@material-ui/icons';
 
+//Reference Q1 for comments.
+
 class Q3 extends Component {
 
     state = {

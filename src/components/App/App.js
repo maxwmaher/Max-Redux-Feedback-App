@@ -22,7 +22,7 @@ const theme = createMuiTheme({
       main: '#0044ff'
     }
   }
-})
+})  //Material-UI color theming for buttons.
 
 class App extends Component {
 
@@ -35,12 +35,12 @@ class App extends Component {
           <h1 className="App-title">tell us how it's going</h1>
         </header>
         <br/>
-        <Route path='/' exact component={Q1}/>
-        <Route path='/Q2' component={Q2}/>
-        <Route path='/Q3' component={Q3}/>
-        <Route path='/Q4' component={Q4}/>
-        <Route path='/Review' component={Review}/>
-        <Route path='/ThankYou' component={ThankYou}/>
+        <Route path='/' exact component={Q1}/>  {/*Question 1 - Feeling */}
+        <Route path='/Q2' component={Q2} /> {/*Question 2 - Understanding */}
+        <Route path='/Q3' component={Q3} /> {/*Question 3 - Support */}
+        <Route path='/Q4' component={Q4} /> {/*Question 4 - Comments*/}
+        <Route path='/Review' component={Review}/> {/*User Review*/}
+        <Route path='/ThankYou' component={ThankYou}/> {/*Confirmation Page*/}
       </div>
       </Router>
       </MuiThemeProvider>
@@ -48,8 +48,4 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (reduxStore) => ({
-  reduxStore
-})
-
-export default connect (mapStateToProps)(App);
+export default connect ()(App);

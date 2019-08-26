@@ -7,21 +7,21 @@ class Q4 extends Component {
 
     state = {
         comment: ''
-    }
+    } //Holds onto the user's current typed comment.
 
     handleChange = (event) => {
         this.setState({
             comment: event.target.value
         })
-    }
+    } //Captures the user's typed messages in the comment box.
 
     handleNextClick = () => {
         if (this.state.comment.length > 300) {
             alert('Please make sure your comment is no more than 300 characters.')
-            return false;
+            return false; //Prevents submission of comments beyond 300 characters.
         }
-        this.props.dispatch({ type: 'Q4', payload: this.state.comment })
-        this.props.history.push('/Review')
+        this.props.dispatch({ type: 'Q4', payload: this.state.comment }) //Dispatches comment to Redux.
+        this.props.history.push('/Review') //Moves to the Review route.
     }
 
     commentValidator = () => {
@@ -34,7 +34,7 @@ class Q4 extends Component {
         } else {
             return <span>{300 - this.state.comment.length} characters remaining</span>;
         }
-    }
+    }  //Comment validation to ensure a user knows when they have entered too long of a comment.
 
     render() {
 
@@ -54,6 +54,7 @@ class Q4 extends Component {
                             <tr>
                                 <td className="td-charactersRemaining">
                                     {this.commentValidator()}
+                                    {/* Shows the user how many characters remain in the comment submission. */}
                                 </td>
                             </tr>
                         </tbody>
